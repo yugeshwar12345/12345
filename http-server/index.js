@@ -1,7 +1,5 @@
 const args = require("minimist")(process.argv.slice(2));
 
-console.log(args);
-
 
 
 const http = require("http");
@@ -52,4 +50,7 @@ http
         break;
     }
   })
-  .listen(5000);
+  .listen(argv.port || 3000, () => {
+    console.log(`Server is running on port ${argv.port || 3000}`);
+  });
+  
