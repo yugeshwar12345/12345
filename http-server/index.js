@@ -1,4 +1,4 @@
-const args = require("minimist")(process.argv.slice(2));
+const argv = require("minimist")(process.argv.slice(2));
 
 
 
